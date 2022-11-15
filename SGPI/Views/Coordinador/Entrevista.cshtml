@@ -1,0 +1,179 @@
+﻿@{
+    ViewData["Title"] = "Entrevista";
+
+}
+
+<body style="background-color:#b9c1ca">
+
+    
+
+    <center><h1>Entrevista</h1></center>
+
+    <br />
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark justify-content-center" style="">
+
+        <ul class="navbar-nav">
+
+            <li class="nav-item active">
+                <a class="nav-link text-black"
+                   href="/Coordinador/BuscarCoordinador">Buscar Coordinador</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link text-black" href="/Coordinador/Programar">Programar</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black" href="/Coordinador/Homologacion">Homologacion</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black" style="background-color:white" href="/Coordinador/Entrevista">Entrevista</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black" href="/Coordinador/Reportes"> Reportes </a>
+            </li>
+        </ul>
+
+    </nav>
+    <br />
+    <br />
+    <div class="">
+        <div style="text-align:right">
+            <a href="/Administrador/Login" id="regresar">
+                Cerrar sesion
+            </a>
+        </div>
+    </div>
+
+    <div class="row">
+        <h4> Buscar Usuario </h4>
+        <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+
+            <form>
+
+                <div class="col ">
+
+                    <input type="text" class="form-control col-sm-3" id="Buscar Usuriotxt" placeholder="Ingresar Usuario" name="Buscar Usurio">
+
+                </div>
+            </form>
+        </div>
+        <div class="col-sm-4 justify-content-md-center align-items-center">
+
+            <button id="ingresarbtn" type="submit" class="btn btn-outline-success col-lg-5"> Buscar Usuario </button>
+        </div>
+    </div>
+    <br />
+    <br />
+    <div class="row">
+
+        <!----fila uno----->
+        <div class="row">
+
+            <!--Nombre-->
+            <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+
+                <form>
+
+                    <h4> Nombre </h4>
+
+                    <div class="col ">
+
+                        <input type="text" class="form-control col-sm-3" disabled="disabled" id="Nombretxt" placeholder="Mauricio" name="Nombre">
+
+                    </div>
+
+                </form>
+
+            </div>
+            <!--Primer Apellido-->
+            <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+
+                <form>
+
+                    <h4> Primer Apellido </h4>
+
+                    <div class="col ">
+
+                        <input type="text" disabled="disabled" class="form-control col-sm-3" id="Apellido1txt" placeholder="Amariles" name="Apellido1">
+
+                    </div>
+
+                </form>
+
+            </div>
+            <!--Segundo Apellido-->
+            <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+
+                <form>
+
+                    <h4> Segundo Apellido </h4>
+
+                    <div class="col ">
+
+                        <input type="text" disabled="disabled" class="form-control col-sm-3" id="Apellido2" placeholder="Camacho" name="Apellido2">
+
+                    </div>
+
+                </form>
+
+            </div>
+        </div>
+
+        <!--fila dos --->
+
+        <div class="row">
+            <div class="col-sm-3 justify-content-md-center align-items-center h-100">
+
+                <form>
+                    <br />
+
+                    <h4> Programa </h4>
+
+                    <div class="col ">
+
+                        <input type="text" disabled="disabled" class="form-control col-sm-3" id="Apellido1txt" placeholder="Especializacion TI" name="Apellido1">
+
+                    </div>
+
+                </form>
+
+            </div>
+            <div class="col-sm-3 justify-content-md-center align-items-center h-100">
+
+                <form>
+                    <br />
+
+                    <h4> Documento </h4>
+
+                    <div class="col ">
+
+                        <input type="text" disabled="disabled" class="form-control col-sm-3" id="Apellido1txt" placeholder="2000003004" name="Apellido1">
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+        <br />
+        <br />
+        <div class="">
+            <center>
+                <br />
+                <br />
+                <div class="row">
+                    <div class="col">
+                        <a href="/Coordinador/Homologacion"><input class="btn btn-outline-danger col-lg-2 " id="Loginbtn" type="button" value="volver"></a>
+                        <a href=""><input class="btn btn-outline-success col-lg-2 " id="Loginbtn" type="button" value="ingresar"></a>
+                    </div>
+
+                </div>
+            </center>
+        </div>
+    </div>
+</body>

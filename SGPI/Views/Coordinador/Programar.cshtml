@@ -1,0 +1,98 @@
+﻿@{
+    ViewData["Title"] = "Programar";
+}
+
+<center><h1>Programar Asing</h1></center>
+<br />
+
+<body style="background-color:#b9c1ca;">
+    <br />
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark justify-content-center" style="">
+
+        <ul class="navbar-nav">
+
+            <li class="nav-item active">
+                <a class="nav-link text-black"
+                   href="/Coordinador/BuscarCoordinador">Buscar</a>
+            </li>
+
+
+            <li class="nav-item">
+                <a class="nav-link text-black" style="background-color:white" href="/Coordinador/Programar">Programar</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black" href="/Coordinador/Homologacion">Homologacion</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black" href="/Coordinador/Entrevista">Entrevista</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black" href="/Coordinador/Reportes"> Reportes </a>
+            </li>
+        </ul>
+
+    </nav>
+    <br />
+    <div style="text-align:right">
+        <a href="/Administrador/Login" id="regresar">
+            Cerrar sesion
+        </a>
+
+    </div>
+    <div>
+
+
+        <div class="row">
+            <div class="col-sm-3 justify-content-md-center align-items-center ">
+                <h4> Periodo Academico </h4>
+                <input type="text" class="form-control col-sm-3" id="academicotxt" placeholder="Ingresar" name="academico">
+            </div>
+
+            <div class="col-sm-3 offset-sm-2 justify-content-md-center align-items-center ">
+                <h4> Programa </h4>
+
+                <select class="form-control col-sm-7">
+
+                    <option> Maestria en Gestión TI </option>
+                    <option> Especialización </option>
+                    <option> Maestría en Medio Ambiente </option>
+
+                </select>
+
+            </div>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+
+    <table class="table">
+        <thead class="thead-dark">
+            <tr class="text-center">
+
+                <th>FECHA</th>
+                <th>SALA O AULA</th>
+                <th>ASIGNATURA</th>
+                <th>CODIGO ASIGNATURA</th>
+                <th>OPCION</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr class="text-center">
+                <td><input class="col-sm-5 text-center" type="text" readonly="readonly" placeholder="01/02/23" /><i class="fas fa-calendar"></i></td>
+                <td><input class="col-sm-4 text-center" type="text" readonly="readonly" placeholder="5-210" /></td>
+                <td><input class="col-sm-7 text-center" type="text" readonly="readonly" placeholder="Construccion S" /></td>
+                <td><input class="col-sm-5 text-center" type="text" readonly="readonly" placeholder="2353245" /></td>
+                <td><button id="ingresarbtn" type="submit" class="btn btn-outline-success col-lg-10">Agregar</button></td>
+            </tr>
+            <tr>
+
+        </tbody>
+    </table>
+
+
+
+</body>

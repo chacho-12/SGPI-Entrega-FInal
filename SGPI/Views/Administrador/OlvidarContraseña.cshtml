@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "OlvidarContraseña";
+}
+<body style="background-color:#b9c1ca;">
+
+
+    <h1 class="col-lg-6 offset-lg-5">Recuperar Contraseña</h1>
+    <br />
+    <br />
+    <form class="col-lg-3 offset-lg-5">
+
+        <div class="form-group">
+            <label for="usuariotxt">Usuario:</label>
+            <input type="text" class="form-control col-sm-3" id="usuariotxt" placeholder="Ingrese Usuario" name="usuario">
+        </div>
+        <br />
+        <div class="form-group">
+            <label for="password">Correo:</label>
+            <input type="email" class="form-control col-sm-3" id="emailtxt" placeholder="Ingrese El Correo" name="correo">
+        </div>
+        <br />
+        <a href="/Administrador/Login"><input class="btn btn-outline-danger col-lg-3 offset-lg-3" id="Loginbtn" type="button" value="Volver"></a>
+        &nbsp;&nbsp;&nbsp
+        <button id="ingresarbtn" type="submit" class="btn btn-outline-success col-lg-3">Enviar</button>
+        <br />
+    </form>
+
+</body>
+
+

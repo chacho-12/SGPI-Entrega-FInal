@@ -1,0 +1,203 @@
+﻿@model SGPI.Models.Usuario
+
+@{
+    ViewData["Title"] = "ActualizarEstudiante";
+}
+
+
+
+<body style="background-color:#b9c1ca;">
+
+    <center><h1>Actualizar Estudiante</h1></center>
+    <br />
+    <!--barra para todas las vistas-->
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark justify-content-center">
+
+        <ul class="navbar-nav">
+    
+            <li class="nav-item">
+                @Html.ActionLink("EstudianteActualizar", "EstudianteActualizar", new {IdUsuario = Model.Idusuario})
+            </li>
+            <li class="nav-link" href="">
+                <a class="nav-link" href=""></a>
+            </li>
+            <li class="nav-item">
+                @Html.ActionLink("Pagos", "Pagos", new {IdUsuario = Model.Idusuario})
+            </li>
+        </ul>
+    </nav>
+
+    <br />
+    <br />
+    <div class="row">
+        <div style="text-align:right">
+            <a href="/Administrador/Login" id="regresar">
+                Cerrar sesion
+            </a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <br />
+    <!--Contenedor principal -->
+    <form method="post">
+        <div>
+
+            <!-- columna 1 -->
+            <div>
+
+
+
+                <!-- columna 1 -->
+                <div class="row">
+
+                    <!-- tipo de Documento -->
+                    <div class="col-sm-4 justify-content-md-center align-items-center ">
+                        <h4> Tipo de Documento </h4>
+
+                        @Html.DropDownList("Iddoc", new SelectList(ViewBag.documento, "Iddoc", "TipoDocumento"), new {@class="form-control dropdown"})
+
+
+
+
+                    </div>
+
+                    <!--  Numero Documento   -->
+                    <div class="col-sm-4 justify-content-md-center align-items-center">
+
+                        <div>
+
+                            <h4> Numero de Documento </h4>
+
+                            <input asp-for="NumeroDocumento" type="text" class="form-control col-sm-3" id="documentotxt" placeholder="Numero de Documento">
+
+                        </div>
+
+                    </div>
+                    <!-- Genero  -->
+
+                    <div class="col-sm-4 justify-content-md-center align-items-center">
+                        <div>
+                            <h4>Género</h4>
+
+                            @Html.DropDownList("IdGenero", new SelectList(ViewBag.genero,"IdGenero","Genero1"), new{@class="form-control dropdown"})
+
+                             
+
+
+
+
+                        </div>
+
+                    </div>
+                </div>
+                <br />
+
+                <!-- Numero Documento   -->
+
+
+            </div>
+            <br />
+            <!-- columna 2  -->
+            <div class="row">
+
+                <!--Nombre-->
+                <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+
+                    <div>
+
+                        <h4> Nombre </h4>
+
+                        <div class="col ">
+
+                            <input asp-for="PrimerNombre" type="text" class="form-control col-sm-3" id="Nombretxt" placeholder="Ingrese Sus Nombres">
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--Primer Apellido-->
+                <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+
+                    <div>
+
+                        <h4> Primer Apellido </h4>
+
+                        <div class="col ">
+
+                            <input asp-for="PrimerApellido" type="text" class="form-control col-sm-3" id="Apellido1txt" placeholder="Ingrese Su Primer Apellido">
+
+                        </div>
+
+                    </div>
+
+                </div>
+                <!--Segundo Apellido-->
+                <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+
+                    <div>
+
+                        <h4> Segundo Apellido </h4>
+
+                        <div class="col ">
+
+                            <input asp-for="SegundoApellido" type="text" class="form-control col-sm-3" id="Apellido2" placeholder="Ingrese Su Segundo Apellido">
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <br />
+            <!-- columna 3  -->
+            <div class="row">
+
+                <!--Correo-->
+                <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+
+                    <div>
+
+                        <h4> Correo Electronico </h4>
+
+                        <div class="col ">
+
+                            <input asp-for="Email" type="text" class="form-control col-sm-3" id="Correotxt" placeholder="Ingrese Su Correo">
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-sm-4 justify-content-md-center align-items-center ">
+
+                    <div>
+                        <h4> Programa </h4>
+
+                        @Html.DropDownList("Idprograma", new SelectList(ViewBag.programa, "Idprograma", "Programa1"), new {@class="form-control dropdown"})
+
+                    </div>
+                </div>
+
+            </div>
+            <!--Programa-->
+
+        </div>
+        <br />
+        <br />
+        <!--Boton crear usuario-->
+
+      
+            <center>
+            <button id="ingresarbtn" type="submit" class="btn btn-outline-success col-lg-3">Editar</button>
+            </center>
+
+        </div>
+        
+
+        </div>
+    </form>
+</body>

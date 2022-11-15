@@ -1,0 +1,208 @@
+﻿@model SGPI.Models.Usuario
+
+@{
+    ViewData["Title"] = "Modificar Usuario";
+}
+
+<body style="background-color:#b9c1ca;">
+
+    <h1 class="col-lg-6 offset-lg-5 ">Modificar Usuario</h1>
+
+
+    <!--barra para todas las vistas-->
+    <br />
+    <br />
+    <nav class="navbar navbar-expand-sm bg-primary navbar-dark justify-content-center" style="">
+
+        <ul class="navbar-nav">
+
+            <li class="nav-item active">
+                <a class="nav-link text-black"
+                   href="/Administrador/CrearUsuario">Crear Usuario</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black" href="/Administrador/BuscarUsuario">Buscar Usuario</a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black" style="background-color:white" href="/Administrador/ModificarUsuario">Modificar Usuario </a>
+            </li>
+
+            <li class="nav-item">
+                <a class="nav-link text-black" href="/Administrador/Reportar"> Reportes </a>
+            </li>
+
+        </ul>
+
+    </nav>
+    <br />
+    <br />
+    <div class="row">
+        <div style="text-align:right">
+            <a href="/Administrador/Login" id="regresar">
+                Cerrar sesion
+            </a>
+        </div>
+    </div>
+    <br />
+    <br />
+    <form method="post">
+        <div class="bus">
+            <!--Contenedor principal -->
+            <div>
+                <!-- columna 1 -->
+                <div class="row">
+
+                    <!-- tipo de Documento -->
+                    <div class="col-sm-4 justify-content-md-center align-items-center ">
+                        <h4> Tipo de Documento </h4>
+
+                        @Html.DropDownList("Iddoc", new SelectList(ViewBag.documento, "Iddoc", "TipoDocumento"), new {@class="form-control dropdown"})
+
+
+
+
+                    </div>
+
+                    <!--  Numero Documento   -->
+                    <div class="col-sm-4 justify-content-md-center align-items-center">
+
+                        <div>
+
+                            <h4> Numero de Documento </h4>
+
+                            <input asp-for="NumeroDocumento" type="text" class="form-control col-sm-3" id="documentotxt" placeholder="Numero de Documento">
+
+                        </div>
+
+                    </div>
+                    <!-- Genero  -->
+                    <div class="col-sm-4 justify-content-md-center align-items-center">
+                        <div>
+                            <h4>
+                                Género</h>
+
+                                @Html.DropDownList("IdGenero",new SelectList(ViewBag.genero,"IdGenero","Genero1"),new{@class="form-control dropdown"})
+
+                        </div>
+
+                    </div>
+                    <br />
+                    <br />
+                    <br />
+                    <!-- Numero Documento   -->
+
+
+                </div>
+                <br />
+                <!-- columna 2  -->
+                <div class="row">
+
+                    <!--Nombre-->
+                    <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+
+                        <div>
+
+                            <h4> Nombre </h4>
+
+                            <div class="col ">
+
+                                <input asp-for="PrimerNombre" type="text" class="form-control col-sm-3" id="Nombretxt" placeholder="Ingrese Sus Nombres">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--Primer Apellido-->
+                    <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+
+                        <div>
+
+                            <h4> Primer Apellido </h4>
+
+                            <div class="col ">
+
+                                <input asp-for="PrimerApellido" type="text" class="form-control col-sm-3" id="Apellido1txt" placeholder="Ingrese Su Primer Apellido">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--Segundo Apellido-->
+                    <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+
+                        <div>
+
+                            <h4> Segundo Apellido </h4>
+
+                            <div class="col ">
+
+                                <input asp-for="SegundoApellido" type="text" class="form-control col-sm-3" id="Apellido2" placeholder="Ingrese Su Segundo Apellido">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <br />
+                <!-- columna 3  -->
+                <div class="row">
+
+                    <!--Correo-->
+                    <div class="col-sm-4 justify-content-md-center align-items-center h-100">
+
+                        <div>
+
+                            <h4> Correo Electronico </h4>
+
+                            <div class="col ">
+
+                                <input asp-for="Email" type="text" class="form-control col-sm-3" id="Correotxt" placeholder="Ingrese Su Correo">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <!--Roles-->
+                    <div class="col-sm-4 justify-content-md-center align-items-center ">
+                        <h4> Roles </h4>
+
+                        @Html.DropDownList("IdRol", new SelectList(ViewBag.rol, "IdRol", "Rol1"), new {@class="form-control dropdown"})
+
+                    </div>
+                    <!--Programa-->
+                    <div class="col-sm-4 justify-content-md-center align-items-center ">
+                        <h4> Programa </h4>
+
+                        @Html.DropDownList("Idprograma", new SelectList(ViewBag.programa, "Idprograma", "Programa1"), new {@class="form-control dropdown"})
+
+                    </div>
+                </div>
+                <br />
+                <center>
+                    <h4> Contraseña </h4>
+                    <b><label for="Contraseñatxt" CONTRASEÑA</label></b>
+                    <input asp-for="Password" placeholder="Ingrese La Nueva Contraseña" type="password" style="width : 300px;" id="contraseñatxt" required />
+
+                </center>
+                <br />
+                <!--Boton crear usuario-->
+                <div class="col-lg-6 offset-lg-5">
+
+                    <button id="ingresarbtn" type="submit" class="btn btn-outline-danger col-lg-4">MODIFICAR USUARIO</button>
+                </div>
+            </div>
+        </div>
+    </form>
+
+</body>
+
+
+
+
+
